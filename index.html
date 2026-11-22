@@ -121,18 +121,111 @@ body{background:radial-gradient(ellipse at 12% 0%,#1b3155 0,transparent 35%),rad
 @media(max-width:850px){.homeMainGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.categoryTile{height:245px;min-height:245px}.homeOtherGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.headerNote{display:none}}
 @media(max-width:520px){.nav{height:68px}.brand{font-size:18px}.brandmark{width:40px;height:40px}.globalBack{padding:8px 12px;font-size:11px}.homeMenu{padding-top:30px!important}.homeIntro{margin-bottom:30px}.homeMark{width:59px;height:59px}.homeIntro h1{font-size:43px}.homeMainGrid{gap:12px}.categoryTile{height:205px;min-height:205px;border-radius:19px!important}.categoryTile:before{border-radius:21px}.categoryTile:after{border-radius:19px}.categoryTile .tileIcon{width:37px;height:37px;top:12px;right:12px;font-size:19px}.categoryTile .tileTitle{font-size:18px;padding:0 14px 18px}.categoryTile .tileArrow{bottom:18px;left:12px;font-size:21px}.homeOtherGrid{grid-template-columns:1fr;gap:9px}.secondaryTile{min-height:62px}.section{padding-top:25px}.sectionHead h2{font-size:21px}}
 
+
+/* ===== AZIN SANG / SIGNATURE UPDATE 06 ===== */
+:root{--lux-bg:#081321;--lux-panel:#10233a;--lux-border:#29445f;--lux-cyan:#70e1dc;--lux-text:#f3f7ff;--lux-muted:#9eb3c9}
+/* Logo image slots */
+.brandmark{overflow:hidden;padding:4px;background:linear-gradient(145deg,#1c4960,#16233b);border-color:#76e5df}
+.brandmark img{width:100%;height:100%;display:block;object-fit:contain;border-radius:11px}
+.homeMark{overflow:hidden;padding:7px;background:linear-gradient(145deg,#1d4d62,#1a2948);border-color:#8aece4;box-shadow:0 14px 42px #020b19,0 0 36px #55d8d022}
+.homeMark img{display:block;width:100%;height:100%;object-fit:contain;border-radius:16px}
+/* Product catalogue: category-specific visual identity */
+#productSection{--section-accent:#70e1dc;--section-accent2:#7c9cff;--section-glow:#55d8d522;min-height:72vh;padding-top:44px;padding-bottom:80px}
+#productSection[data-category="سنگ"]{--section-accent:#ff8194;--section-accent2:#ffb17a;--section-glow:#ff71851c}
+#productSection[data-category="روشویی"]{--section-accent:#5de0c0;--section-accent2:#71caff;--section-glow:#4edcc01c}
+#productSection[data-category="بازسازی منازل"]{--section-accent:#c0a2ff;--section-accent2:#f09ed7;--section-glow:#b99aff20}
+#productSection[data-category="ابزار سنگی"]{--section-accent:#78bdff;--section-accent2:#65e3ed;--section-glow:#66bfff20}
+#productSection[data-category="favorites"]{--section-accent:#ff8db0;--section-accent2:#c1a2ff;--section-glow:#ff8db01c}
+#productSection .sectionHead{position:relative;padding:24px 26px;margin-bottom:20px;border:1px solid color-mix(in srgb,var(--section-accent) 35%,#29445f);border-radius:24px;background:radial-gradient(ellipse at 5% 0%,var(--section-glow),transparent 48%),linear-gradient(120deg,#142943,#0e1c30);box-shadow:0 16px 45px #020a1766;overflow:hidden}
+#productSection .sectionHead:after{content:"";position:absolute;left:-36px;top:-72px;width:190px;height:190px;border:1px solid color-mix(in srgb,var(--section-accent) 25%,transparent);border-radius:50%;box-shadow:0 0 0 22px color-mix(in srgb,var(--section-accent) 5%,transparent),0 0 0 46px color-mix(in srgb,var(--section-accent) 4%,transparent);pointer-events:none}
+#productSection .sectionHead h2{font-size:clamp(23px,4vw,34px);letter-spacing:-.7px;color:#f7fbff}
+#productSection .sectionHead p{font-size:12px;color:#a9bfd5}
+#productSection .goldline{width:82px;height:4px;background:linear-gradient(90deg,var(--section-accent),var(--section-accent2));box-shadow:0 0 16px var(--section-glow)}
+.productTools{display:grid;grid-template-columns:minmax(0,1fr) minmax(245px,.55fr);gap:13px;margin:20px 0 10px}
+.searchShell,.sortShell{min-width:0;display:flex;align-items:center;gap:11px;padding:8px 13px;border-radius:18px;border:1px solid #344f6d;background:linear-gradient(145deg,#142b45,#0d1b2e);box-shadow:0 10px 28px #020b1850;transition:.25s}
+.searchShell:focus-within,.sortShell:focus-within{border-color:var(--section-accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--section-accent) 12%,transparent),0 12px 30px #020b1870;transform:translateY(-1px)}
+.searchGlyph,.sortGlyph{flex:0 0 38px;width:38px;height:38px;display:grid;place-items:center;border-radius:12px;color:var(--section-accent);background:color-mix(in srgb,var(--section-accent) 12%,#12253d);font-size:27px}
+.searchShell .search{width:100%;min-width:0;border:0!important;outline:0!important;box-shadow:none!important;background:transparent!important;padding:10px 0;font-size:12px;color:#f4f8ff}
+.searchShell .search::placeholder{color:#8da4bd}
+.searchShell kbd{white-space:nowrap;padding:5px 9px;border:1px solid #395570;border-radius:8px;color:#9bb2c9;font:10px Tahoma;background:#102039}
+.sortShell{position:relative;gap:9px}.sortCaption{white-space:nowrap;color:#9fb4ca;font-size:10px;font-weight:700}
+.sortShell select{width:100%;min-width:0;border:0!important;outline:0;background:transparent!important;color:#f5f8ff;padding:9px 2px;font-size:11px;cursor:pointer}
+.sortShell select option{background:#12243a;color:#fff}
+.productResults{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 2px 17px;padding:0 4px;color:#9fb3c9;font-size:10px}
+.resultAccent{color:var(--section-accent);font-size:9px;letter-spacing:2px;font-weight:900}
+.products{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.product{position:relative;border-radius:22px;overflow:hidden;border:1px solid #2c4865;background:linear-gradient(155deg,#172c46,#0d1b2e);box-shadow:0 13px 34px #020a1760;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s;animation:productIn .45s both;animation-delay:calc(var(--card-index,0)*35ms)}
+.product:before{content:"";position:absolute;inset:0 0 auto;height:2px;background:linear-gradient(90deg,transparent,var(--section-accent),var(--section-accent2),transparent);opacity:.7;z-index:2}
+.product:hover{transform:translateY(-7px);border-color:color-mix(in srgb,var(--section-accent) 65%,#35516e);box-shadow:0 22px 48px #020a1790,0 0 25px var(--section-glow)}
+.productImg{height:205px;background:radial-gradient(circle at 50% 35%,#29435f,#101e32 72%);cursor:pointer}
+.productImg:after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,#08152366);pointer-events:none}
+.productImg img{transition:transform .65s cubic-bezier(.2,.8,.2,1);filter:saturate(1.06)}
+.product:hover .productImg img{transform:scale(1.065)}
+.productNumber{position:absolute;bottom:10px;right:12px;z-index:2;color:#ffffffa8;font-size:10px;letter-spacing:2px;font-weight:800}
+.discount{top:12px;right:12px;background:linear-gradient(120deg,#ff647f,#e84972);border-radius:9px;padding:5px 10px;font-weight:800;box-shadow:0 7px 18px #d33b5b55}
+.heart{width:37px;height:37px;top:11px;left:11px;z-index:3;background:#081522c9;border:1px solid #ffffff38;backdrop-filter:blur(12px);font-size:17px;transition:.2s}
+.heart:hover{transform:scale(1.08)}.heart.active{color:#ff7897;border-color:#ff789788}
+.productBody{padding:15px 16px 13px}
+.productCategoryLine{display:flex;align-items:center;gap:6px;color:var(--section-accent);font-size:10px;margin-bottom:7px}
+.productCategoryLine small{color:#91a9c1;font-size:9px}.stockDot{width:7px;height:7px;border-radius:50%;background:#687b8d;margin-right:auto}.stockDot.isAvailable{background:#4de0a2;box-shadow:0 0 10px #4de0a277}.stockDot.isUnavailable{background:#ff7184}
+.productBody h3{font-size:14px;line-height:1.8;min-height:48px;margin:0 0 10px;color:#f3f7ff}
+.productPriceLine{display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-height:29px}.productPriceLine .price{font-size:14px;color:var(--section-accent);font-weight:900}.productPriceLine .oldprice{font-size:10px;color:#8296aa}
+.productFoot{margin-top:13px;padding-top:11px;border-top:1px solid #ffffff12;display:flex;align-items:center;justify-content:space-between}
+.productDetailHint{font-size:10px;color:#9eb3c9}
+.productOpen{width:35px;height:35px;border-radius:12px;border:1px solid color-mix(in srgb,var(--section-accent) 48%,#34516e);background:color-mix(in srgb,var(--section-accent) 12%,#142940);color:var(--section-accent);font-size:18px;transition:.2s}
+.productOpen:hover{transform:translateX(-3px);background:var(--section-accent);color:#081321}
+.productEmpty{display:flex;flex-direction:column;align-items:center;gap:8px;padding:55px 20px;background:linear-gradient(145deg,#142943,#0d1b2e);border:1px dashed color-mix(in srgb,var(--section-accent) 45%,#38516d);border-radius:23px}
+.emptyIcon{display:grid;place-items:center;width:58px;height:58px;border-radius:19px;background:color-mix(in srgb,var(--section-accent) 13%,#142943);color:var(--section-accent);font-size:33px}.productEmpty b{font-size:15px;color:#edf5ff}.productEmpty small{font-size:11px;color:#9db2c9}
+@keyframes productIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+/* Each information section gets its own identity and composed layout */
+#about,#renovation,#samples,#reviews,#faq,#rules{min-height:68vh;padding-top:45px;padding-bottom:85px}
+#about{--page-accent:#77d6f5;--page-soft:#77d6f51c}#renovation{--page-accent:#c09bff;--page-soft:#b994ff20}#samples{--page-accent:#5fe0c0;--page-soft:#5fe0c01c}#reviews{--page-accent:#ff91b3;--page-soft:#ff91b31c}#faq{--page-accent:#ffc77a;--page-soft:#ffc77a1c}#rules{--page-accent:#8db7ff;--page-soft:#8db7ff1c}
+#about .sectionHead,#samples .sectionHead,#reviews .sectionHead,#faq .sectionHead{padding:22px 25px;border-radius:22px;border:1px solid color-mix(in srgb,var(--page-accent) 38%,#2b4562);background:radial-gradient(ellipse at 0 0,var(--page-soft),transparent 55%),linear-gradient(130deg,#172c46,#0e1d31);box-shadow:0 15px 38px #020a1755}
+#about .sectionHead h2,#samples .sectionHead h2,#reviews .sectionHead h2,#faq .sectionHead h2{font-size:clamp(23px,4vw,32px);color:#f5f8ff}
+#about .goldline,#samples .goldline,#reviews .goldline,#faq .goldline{background:linear-gradient(90deg,var(--page-accent),transparent);height:4px;width:85px}
+#about .infoCard,#rules .infoCard{position:relative;overflow:hidden;padding:27px;border-radius:23px;border-color:color-mix(in srgb,var(--page-accent) 32%,#2b4562);background:radial-gradient(ellipse at 100% 0,var(--page-soft),transparent 50%),linear-gradient(145deg,#172c46,#0d1b2e);box-shadow:0 16px 42px #020a1755}
+#about .infoCard h3,#rules .infoCard h3{color:var(--page-accent);font-size:18px}
+#about .infoCard p,#about .infoCard li,#rules .infoCard p{color:#c4d2e2;line-height:2.2;font-size:13px}
+#about .infoCard ul{padding-right:21px}#about .infoCard li::marker{color:var(--page-accent)}
+#renovation>.infoCard{position:relative;overflow:hidden;padding:clamp(24px,5vw,48px);border-radius:28px;border:1px solid #9e83d966;background:radial-gradient(ellipse at 95% 0,#a987ed25,transparent 45%),radial-gradient(ellipse at 0 100%,#5ac9e51b,transparent 42%),linear-gradient(135deg,#1a2948,#101b32 65%,#17233c);box-shadow:0 24px 65px #02081699}
+#renovation>.infoCard:after{content:"⌂";position:absolute;left:5%;top:0;font-size:190px;line-height:1;color:#b69aff0c;pointer-events:none}
+#renovation .sectionHead h2{font-size:clamp(24px,4vw,34px);color:#f5efff}#renovation .sectionHead p{color:#bdb2d9}
+#renovation .btn.gold{background:linear-gradient(120deg,#c09cff,#79c9f1);color:#10162a;border:0;box-shadow:0 10px 28px #9e83d933}
+#renovation .btn:not(.gold){border-color:#8068aa;background:#251f42;color:#e6dcff}
+#samplesGrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+#samplesGrid .sample{padding:12px;border-radius:22px;border-color:#2b655d;background:linear-gradient(150deg,#173b3a,#102531);box-shadow:0 15px 36px #020a1760;transition:.3s;overflow:hidden}
+#samplesGrid .sample:hover{transform:translateY(-6px);border-color:#5fe0c0;box-shadow:0 22px 44px #020a1788}
+#samplesGrid .sampleImg{height:190px;border-radius:15px;background:linear-gradient(135deg,#1d5551,#142b3a);color:#6ce3ca;font-size:44px;overflow:hidden}
+#samplesGrid .sample b{display:block;padding:5px 5px 0;color:#eafff9;font-size:14px}#samplesGrid .sample p{padding:0 5px 6px;color:#a7c8c2}
+#reviewsGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+#reviewsGrid .review{position:relative;padding:22px 22px 22px 58px;border-radius:20px;border-color:#70445c;background:linear-gradient(140deg,#38243b,#18233b);box-shadow:0 14px 32px #020a1760}
+#reviewsGrid .review:after{content:"“";position:absolute;left:18px;top:3px;color:#ff91b3;font: bold 58px Georgia;opacity:.75}
+#reviewsGrid .review b{color:#ffeaf2;font-size:14px}#reviewsGrid .stars{color:#ffc66e;letter-spacing:3px}#reviewsGrid .muted{color:#d0b9ca;font-size:12px;line-height:2}
+#faq .aboutGrid{grid-template-columns:1fr 1fr;gap:14px}
+#faq .infoCard{padding:21px 23px;border-radius:20px;border-color:#80613b;background:linear-gradient(145deg,#3a2d26,#172438);box-shadow:0 12px 30px #020a1760;transition:.25s}
+#faq .infoCard:hover{transform:translateY(-4px);border-color:#ffc77a}
+#faq .infoCard h3{color:#ffd18e;font-size:14px}#faq .infoCard p{color:#d6c8b9;font-size:12px;line-height:2}
+#rules .infoCard{padding:clamp(25px,5vw,45px)}#rules .infoCard h3{font-size:22px}#rules .infoCard p{font-size:14px;line-height:2.4}
+#support{border-top:1px solid #36506d;background:radial-gradient(ellipse at 15% 0,#50c8d51a,transparent 45%),linear-gradient(145deg,#0c1c30,#081321);padding:42px 0 30px}
+#support .footerGrid>div{padding:20px;border:1px solid #2c4865;border-radius:19px;background:#11243a88}
+#support .footerGrid>div:nth-child(1){border-color:#367d84}#support .footerGrid>div:nth-child(2){border-color:#526ca2}#support .footerGrid>div:nth-child(3){border-color:#8b6b4b}
+#support h3{color:#7fe4df;font-size:14px}#support .footerGrid>div:nth-child(2) h3{color:#9bbaff}#support .footerGrid>div:nth-child(3) h3{color:#ffd095}
+#support p,#support a{line-height:2.2;color:#b7c9dc}#support a:hover{color:#8cebe4}
+@media(max-width:850px){.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.productTools{grid-template-columns:1fr}.productImg{height:185px}#samplesGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){#productSection{padding-top:25px}.productTools{gap:9px;margin-top:14px}.searchShell,.sortShell{border-radius:15px;padding:7px 10px}.searchGlyph,.sortGlyph{width:34px;height:34px;flex-basis:34px}.searchShell .search{font-size:10px}.searchShell kbd{display:none}.sortShell{display:grid;grid-template-columns:34px auto 1fr}.sortCaption{font-size:9px}.sortShell select{font-size:10px}.productResults{margin-bottom:12px}.products{gap:10px}.product{border-radius:17px}.productImg{height:145px}.productBody{padding:11px}.productBody h3{font-size:11px;min-height:43px}.productPriceLine .price{font-size:11px}.productDetailHint{font-size:9px}.productOpen{width:31px;height:31px}.productNumber{font-size:8px}.discount{font-size:9px;padding:3px 7px}.heart{width:32px;height:32px}#productSection .sectionHead{padding:18px;border-radius:18px}#productSection .sectionHead h2{font-size:22px}#about,#renovation,#samples,#reviews,#faq,#rules{padding-top:25px}#about .aboutGrid,#faq .aboutGrid{grid-template-columns:1fr}#samplesGrid,#reviewsGrid{grid-template-columns:1fr}#samplesGrid .sampleImg{height:175px}#support .footerGrid{grid-template-columns:1fr}#support .footerGrid>div{padding:17px}}
+
 </style>
 </head>
 <body>
 <header class="topbar"><div class="wrap nav">
  <button class="globalBack" id="globalBack" onclick="showPage('home')" type="button">→ بازگشت</button>
- <a class="brand" href="#" onclick="showPage('home');return false"><span class="brandmark">✦</span><span>آذین سنگ<small>AZIN SANG COLLECTION</small></span></a>
+ <a class="brand" href="#" onclick="showPage('home');return false"><span class="brandmark"><img src="azin-sang-logo.png" alt="لوگوی آذین سنگ"></span><span>آذین سنگ<small>AZIN SANG COLLECTION</small></span></a>
  <span class="headerNote">AZIN SANG · STONE STUDIO</span>
 </div></header>
 <main>
 <section class="wrap homeMenu pageView active" id="home">
  <div class="homeIntro">
-  <div class="homeMark">✦</div>
+  <div class="homeMark"><img src="azin-sang-logo.png" alt="لوگوی آذین سنگ" onerror="this.style.display='none'"></div>
   <div class="eyebrow">AZIN SANG COLLECTION</div>
   <h1>آذین <span>سنگ</span></h1>
   <p>انتخاب بخش موردنظر</p>
@@ -154,8 +247,8 @@ body{background:radial-gradient(ellipse at 12% 0%,#1b3155 0,transparent 35%),rad
   <button class="homeTile secondaryTile" onclick="showPage('rules')"><span>≡</span> قوانین سفارش <b>←</b></button>
  </div>
 </section>
-<section class="wrap section pageView" id="productSection"><div class="sectionHead"><div><h2 id="productHeading">محصولات آذین سنگ</h2><div class="goldline"></div><p>برای مشاهده جزئیات، محصول را انتخاب کنید</p></div></div>
- <div class="toolbar"><input id="searchInput" class="field search" placeholder="جست‌وجوی نام محصول یا مدل..." oninput="renderProducts()"><select id="sortSelect" class="field" onchange="renderProducts()"><option value="new">جدیدترین</option><option value="cheap">ارزان‌ترین</option><option value="expensive">گران‌ترین</option><option value="name">نام محصول</option></select><select id="stockSelect" class="field" onchange="renderProducts()"><option value="all">همه محصولات</option><option value="available">فقط موجودها</option></select></div>
+<section class="wrap section pageView" id="productSection"><div class="sectionHead"><div><h2 id="productHeading">محصولات آذین سنگ</h2><div class="goldline"></div><p id="productSubtitle">گزیده‌ای از محصولات منتخب آذین سنگ</p></div></div>
+ <div class="productTools"><label class="searchShell"><span class="searchGlyph">⌕</span><input id="searchInput" class="field search" placeholder="نام محصول، مدل یا ویژگی موردنظر را جست‌وجو کنید..." oninput="renderProducts()"><kbd>جست‌وجو</kbd></label><label class="sortShell"><span class="sortGlyph">↕</span><span class="sortCaption">مرتب‌سازی</span><select id="sortSelect" class="field" onchange="renderProducts()"><option value="new">تازه‌ترین محصولات</option><option value="cheap">قیمت: از کم به زیاد</option><option value="expensive">قیمت: از زیاد به کم</option><option value="name">ترتیب نام محصول</option></select></label></div><div class="productResults"><span id="productResultCount">در حال نمایش محصولات</span><span class="resultAccent">AZIN SANG / COLLECTION</span></div>
  <div class="products" id="productsGrid"><div class="empty">هنوز محصولی ثبت نشده است. محصولات را از پنل مدیریت اضافه کنید.</div></div>
 </section>
 <section class="wrap section pageView" id="about"><div class="sectionHead"><div><h2>درباره آذین سنگ</h2><div class="goldline"></div><p>کیفیت، ظرافت و تعهد در اجرای هر پروژه</p></div></div>
@@ -171,7 +264,7 @@ body{background:radial-gradient(ellipse at 12% 0%,#1b3155 0,transparent 35%),rad
 <section class="wrap section pageView" id="faq"><div class="sectionHead"><div><h2>سؤالات متداول</h2><div class="goldline"></div></div></div><div class="aboutGrid"><div class="infoCard"><h3>چطور سفارش ثبت کنم؟</h3><p>برای ثبت سفارش با شماره کارگاه تماس بگیرید.</p></div><div class="infoCard"><h3>آیا روشویی سفارشی ساخته می‌شود؟</h3><p>برای بررسی مدل و ابعاد دلخواه با ما تماس بگیرید.</p></div><div class="infoCard"><h3>چطور درخواست بازسازی بدهم؟</h3><p>فرم درخواست بازسازی را تکمیل کنید تا پیامک آماده شود.</p></div><div class="infoCard"><h3>چطور عکس پروژه را ارسال کنم؟</h3><p>از طریق روبیکا با شناسه پشتیبانی در ارتباط باشید.</p></div></div></section>
 <section class="wrap section pageView" id="rules"><div class="infoCard"><h3>قوانین و شرایط سفارش</h3><p>قیمت نهایی و زمان تحویل پس از بررسی نوع محصول، ابعاد و شرایط پروژه اعلام می‌شود. ثبت درخواست به‌منزله تأیید نهایی سفارش نیست و سفارش پس از هماهنگی با کارگاه قطعی خواهد شد.</p></div></section>
 </main>
-<footer class="footer pageView" id="support"><div class="wrap footerGrid"><div><div class="brand"><span class="brandmark">✧</span><span>آذین سنگ<small>هنر سنگ، زیبایی ماندگار</small></span></div><p>انتخابی مطمئن برای سنگ، روشویی، ابزار سنگی و بازسازی منازل.</p></div><div><h3>ارتباط با ما</h3><p>تلفن: <a href="tel:09129374866">09129374866</a></p><p>روبیکا: <a href="https://rubika.ir/Omidi__Xx" target="_blank" rel="noopener">@Omidi__Xx</a></p><p>آدرس: بندرماهشهر، انتهای خیابان طالقانی، پایین‌تر از کاشی‌فروشی الوند، آذین سنگ</p></div><div><h3>مسیریابی و خدمات</h3><p><a target="_blank" rel="noopener" href="https://nshn.ir/?q=%D8%A2%D8%B0%DB%8C%D9%86%20%D8%B3%D9%86%DA%AF%20%D8%A8%D9%86%D8%AF%D8%B1%D9%85%D8%A7%D9%87%D8%B4%D9%87%D8%B1">مسیریابی با نشان</a></p><p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%D8%A2%D8%B0%DB%8C%D9%86%20%D8%B3%D9%86%DA%AF%20%D8%A8%D9%86%D8%AF%D8%B1%D9%85%D8%A7%D9%87%D8%B4%D9%87%D8%B1">مسیریابی با گوگل مپ</a></p><p><a target="_blank" rel="noopener" href="https://balad.ir/">مسیریابی با بلد</a></p><p><a href="#rules">قوانین سفارش</a> · <a href="#faq">سؤالات متداول</a></p></div></div><div class="wrap muted" style="text-align:center;margin-top:25px">© تمامی حقوق برای آذین سنگ محفوظ است.</div></footer>
+<footer class="footer pageView" id="support"><div class="wrap footerGrid"><div><div class="brand"><span class="brandmark"><img src="azin-sang-logo.png" alt="لوگوی آذین سنگ"></span><span>آذین سنگ<small>هنر سنگ، زیبایی ماندگار</small></span></div><p>انتخابی مطمئن برای سنگ، روشویی، ابزار سنگی و بازسازی منازل.</p></div><div><h3>ارتباط با ما</h3><p>تلفن: <a href="tel:09129374866">09129374866</a></p><p>روبیکا: <a href="https://rubika.ir/Omidi__Xx" target="_blank" rel="noopener">@Omidi__Xx</a></p><p>آدرس: بندرماهشهر، انتهای خیابان طالقانی، پایین‌تر از کاشی‌فروشی الوند، آذین سنگ</p></div><div><h3>مسیریابی و خدمات</h3><p><a target="_blank" rel="noopener" href="https://nshn.ir/?q=%D8%A2%D8%B0%DB%8C%D9%86%20%D8%B3%D9%86%DA%AF%20%D8%A8%D9%86%D8%AF%D8%B1%D9%85%D8%A7%D9%87%D8%B4%D9%87%D8%B1">مسیریابی با نشان</a></p><p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%D8%A2%D8%B0%DB%8C%D9%86%20%D8%B3%D9%86%DA%AF%20%D8%A8%D9%86%D8%AF%D8%B1%D9%85%D8%A7%D9%87%D8%B4%D9%87%D8%B1">مسیریابی با گوگل مپ</a></p><p><a target="_blank" rel="noopener" href="https://balad.ir/">مسیریابی با بلد</a></p><p><a href="#rules">قوانین سفارش</a> · <a href="#faq">سؤالات متداول</a></p></div></div><div class="wrap muted" style="text-align:center;margin-top:25px">© تمامی حقوق برای آذین سنگ محفوظ است.</div></footer>
 
 <button class="adminFab" title="پنل مدیریت" onclick="openAdminLogin()">⚙</button>
 <div class="toast" id="toast"></div>
@@ -210,12 +303,20 @@ function toast(t){let x=document.getElementById('toast');x.textContent=t;x.class
 function closeModal(id){document.getElementById(id).classList.remove('show')}
 function showPage(id){document.querySelectorAll('.pageView').forEach(el=>el.classList.remove('active'));const target=document.getElementById(id);if(target){target.classList.add('active');}const back=document.getElementById('globalBack');if(back)back.classList.toggle('visible',id!=='home');window.scrollTo({top:0,behavior:'smooth'});}
 function openRenovationPage(){showPage('renovation');}
-function selectCategory(c){activeCategory=c;favoritesOnly=false;document.getElementById('productHeading').textContent='محصولات '+c;showPage('productSection');renderProducts()}
-function resetFilters(){activeCategory='';favoritesOnly=false;document.getElementById('searchInput').value='';document.getElementById('productHeading').textContent='محصولات آذین سنگ';renderProducts()}
-function showFavorites(){activeCategory='';favoritesOnly=true;document.getElementById('productHeading').textContent='علاقه‌مندی‌های من';renderProducts();showPage('productSection')}
+function selectCategory(c){activeCategory=c;favoritesOnly=false;const sec=document.getElementById('productSection');sec.dataset.category=c;document.getElementById('productHeading').textContent='مجموعه '+c;document.getElementById('productSubtitle').textContent='محصولات منتخب و جزئیات مجموعه '+c;document.getElementById('searchInput').value='';document.getElementById('sortSelect').value='new';showPage('productSection');renderProducts()}
+function resetFilters(){activeCategory='';favoritesOnly=false;document.getElementById('productSection').dataset.category='';document.getElementById('searchInput').value='';document.getElementById('sortSelect').value='new';document.getElementById('productHeading').textContent='مجموعه محصولات آذین سنگ';document.getElementById('productSubtitle').textContent='گزیده‌ای از محصولات منتخب آذین سنگ';renderProducts()}
+function showFavorites(){activeCategory='';favoritesOnly=true;document.getElementById('productSection').dataset.category='favorites';document.getElementById('productHeading').textContent='علاقه‌مندی‌های من';document.getElementById('productSubtitle').textContent='محصولاتی که برای مشاهده دوباره ذخیره کرده‌اید';renderProducts();showPage('productSection')}
 function money(n){return Number(n||0).toLocaleString('en-US')+' تومان'}
 function safe(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function renderProducts(){let q=(document.getElementById('searchInput')?.value||'').trim().toLowerCase(),sort=document.getElementById('sortSelect')?.value||'new',stock=document.getElementById('stockSelect')?.value||'all';let arr=data.products.filter(p=>(!activeCategory||p.category===activeCategory)&&(!favoritesOnly||favorites.includes(p.id))&&(!q||(p.name+' '+p.category+' '+(p.description||'')).toLowerCase().includes(q))&&(stock!=='available'||p.available));if(sort==='cheap')arr.sort((a,b)=>(+a.price||0)-(+b.price||0));if(sort==='expensive')arr.sort((a,b)=>(+b.price||0)-(+a.price||0));if(sort==='name')arr.sort((a,b)=>a.name.localeCompare(b.name,'fa'));if(sort==='new')arr.sort((a,b)=>(b.created||0)-(a.created||0));let grid=document.getElementById('productsGrid');if(!arr.length){grid.innerHTML='<div class="empty">محصولی برای نمایش وجود ندارد.</div>';return}grid.innerHTML=arr.map(p=>`<article class="product"><div class="productImg" onclick="openProduct('${p.id}')">${p.image?`<img src="${safe(p.image)}" alt="${safe(p.name)}">`:'<div class="placeholder">◇</div>'}${p.oldPrice&&+p.oldPrice>+p.price?'<span class="discount">تخفیف</span>':''}<button class="heart ${favorites.includes(p.id)?'active':''}" onclick="event.stopPropagation();toggleFav('${p.id}')">${favorites.includes(p.id)?'♥':'♡'}</button></div><div class="productBody"><h3>${safe(p.name)}</h3><div class="muted">${safe(p.category)}</div><div style="margin-top:8px"><span class="price">${p.price?money(p.price):'استعلام قیمت'}</span>${p.oldPrice?`<span class="oldprice">${money(p.oldPrice)}</span>`:''}</div><div class="productFoot"><span class="stock">${p.available?'● موجود':'● ناموجود'}</span><button class="btn" onclick="openProduct('${p.id}')">مشاهده جزئیات ←</button></div></div></article>`).join('')}
+function renderProducts(){
+ let q=(document.getElementById('searchInput')?.value||'').trim().toLocaleLowerCase('fa'),sort=document.getElementById('sortSelect')?.value||'new';
+ let arr=data.products.filter(p=>(!activeCategory||p.category===activeCategory)&&(!favoritesOnly||favorites.includes(p.id))&&(!q||(p.name+' '+p.category+' '+(p.description||'')+' '+(p.brand||'')+' '+(p.model||'')).toLocaleLowerCase('fa').includes(q)));
+ if(sort==='cheap')arr.sort((a,b)=>(+a.price||0)-(+b.price||0));if(sort==='expensive')arr.sort((a,b)=>(+b.price||0)-(+a.price||0));if(sort==='name')arr.sort((a,b)=>a.name.localeCompare(b.name,'fa'));if(sort==='new')arr.sort((a,b)=>(b.created||0)-(a.created||0));
+ let grid=document.getElementById('productsGrid'),count=document.getElementById('productResultCount');
+ if(count)count.textContent=`${arr.length.toLocaleString('fa-IR')} محصول در این مجموعه`;
+ if(!arr.length){grid.innerHTML=`<div class="empty productEmpty"><span class="emptyIcon">⌕</span><b>${q?'نتیجه‌ای برای جست‌وجوی شما پیدا نشد':'هنوز محصولی در این مجموعه ثبت نشده است'}</b><small>${q?'عبارت دیگری را امتحان کنید.':'محصولات این بخش پس از ثبت در پنل مدیریت نمایش داده می‌شوند.'}</small></div>`;return}
+ grid.innerHTML=arr.map((p,i)=>`<article class="product" style="--card-index:${i}"><div class="productImg" onclick="openProduct('${p.id}')">${p.image?`<img loading="lazy" src="${safe(p.image)}" alt="${safe(p.name)}">`:'<div class="placeholder">◇</div>'}${p.oldPrice&&+p.oldPrice>+p.price?'<span class="discount">پیشنهاد ویژه</span>':''}<span class="productNumber">${String(i+1).padStart(2,'0')}</span><button class="heart ${favorites.includes(p.id)?'active':''}" aria-label="افزودن به علاقه‌مندی" onclick="event.stopPropagation();toggleFav('${p.id}')">${favorites.includes(p.id)?'♥':'♡'}</button></div><div class="productBody"><div class="productCategoryLine"><span>${safe(p.category)}</span><i class="stockDot ${p.available?'isAvailable':'isUnavailable'}"></i><small>${p.available?'آماده سفارش':'ناموجود'}</small></div><h3>${safe(p.name)}</h3><div class="productPriceLine"><span class="price">${p.price?money(p.price):'استعلام قیمت'}</span>${p.oldPrice&&+p.oldPrice>+p.price?`<span class="oldprice">${money(p.oldPrice)}</span>`:''}</div><div class="productFoot"><span class="productDetailHint">مشاهده مشخصات</span><button class="productOpen" aria-label="مشاهده جزئیات" onclick="openProduct('${p.id}')">←</button></div></div></article>`).join('')
+}
 function toggleFav(id){favorites=favorites.includes(id)?favorites.filter(x=>x!==id):[...favorites,id];localStorage.setItem('azin_favs',JSON.stringify(favorites));renderProducts()}
 function openProduct(id){let p=data.products.find(x=>x.id===id);if(!p)return;document.getElementById('detailTitle').textContent=p.name;document.getElementById('detailContent').innerHTML=`<div class="detailLayout"><div class="detailImage">${p.image?`<img src="${safe(p.image)}">`:'<span class="placeholder">◇</span>'}</div><div><div class="muted">${safe(p.category)}</div><h2>${safe(p.name)}</h2><div class="price">${p.price?money(p.price):'برای استعلام قیمت تماس بگیرید'}</div>${p.oldPrice?`<div class="oldprice">${money(p.oldPrice)}</div>`:''}<p>${safe(p.description||'برای دریافت اطلاعات بیشتر با کارگاه تماس بگیرید.')}</p><p class="stock">${p.available?'موجودی: '+(p.stock??'موجود'):'ناموجود'}</p><div class="modalActions"><a class="btn gold" href="tel:${PHONE}">ثبت سفارش و تماس</a><button class="btn" onclick="shareProduct('${p.id}')">اشتراک‌گذاری</button><button class="btn" onclick="toggleFav('${p.id}');openProduct('${p.id}')">♡ علاقه‌مندی</button></div></div></div>`;document.getElementById('productModal').classList.add('show')}
 async function shareProduct(id){let p=data.products.find(x=>x.id===id),url=location.href.split('#')[0]+'#product-'+id;try{if(navigator.share)await navigator.share({title:p.name,text:'مشاهده محصول در آذین سنگ',url});else{await navigator.clipboard.writeText(url);toast('لینک محصول کپی شد')}}catch(e){}}
