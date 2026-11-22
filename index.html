@@ -72,12 +72,62 @@ body{background:radial-gradient(ellipse at 12% 0%,#26345a 0,transparent 34%),rad
 @media(max-width:850px){.homeMainGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.categoryTile{height:230px;min-height:230px}.homeOtherGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.homeMenu{padding-top:28px!important}.homeIntro{margin-bottom:28px}.homeMainGrid{gap:12px}.categoryTile{height:190px;min-height:190px;border-radius:18px!important}.categoryTile:before{border-radius:20px}.categoryTile:after{border-radius:18px}.categoryTile .tileIcon{width:36px;height:36px;top:11px;right:11px;font-size:19px}.categoryTile .tileTitle{font-size:17px;padding-right:13px}.categoryTile .tileDesc{font-size:10px;padding-right:13px;padding-bottom:17px}.categoryTile .tileArrow{bottom:16px;left:12px}.homeOtherGrid{grid-template-columns:1fr;gap:9px}.secondaryTile{min-height:60px}}
 
+
+/* AZIN SANG — premium interface refresh */
+:root{--bg:#08111e;--panel:#101e31;--panel2:#172943;--gold:#79e1df;--gold2:#d8fbfa;--green:#54dfb0;--muted:#a9bad0;--line:#2c4564;--white:#f5f8ff;--red:#ff6480}
+body{background:radial-gradient(ellipse at 12% 0%,#1b3155 0,transparent 35%),radial-gradient(ellipse at 92% 20%,#153c48 0,transparent 30%),#08111e;color:#f5f8ff}
+.topbar{background:rgba(7,16,29,.82);border-bottom:1px solid #36516c;backdrop-filter:blur(22px);box-shadow:0 10px 35px #02091455}
+.nav{height:78px;position:relative}
+.brand{font-size:21px;letter-spacing:-.5px}.brandmark{width:46px;height:46px;border-radius:16px;border:1px solid #72e4dc;background:linear-gradient(145deg,#244d65,#192744);color:#a3f7ef;box-shadow:0 0 28px #4fdacb30}
+.brand small{color:#8fa9c6;letter-spacing:2px}
+.headerNote{font-size:10px;letter-spacing:3px;color:#8fa9c6;font-weight:700}
+.globalBack{display:none;align-items:center;gap:8px;border:1px solid #66859d;background:linear-gradient(135deg,#19314a,#102238);color:#dffcff;padding:10px 17px;border-radius:14px;font-size:12px;font-weight:800;box-shadow:0 7px 24px #02091470;transition:.25s}
+.globalBack.visible{display:inline-flex}.globalBack:hover{transform:translateY(-2px);border-color:#77e8d9;box-shadow:0 10px 30px #4edacb25}
+.homeMenu{padding-top:48px!important;padding-bottom:58px!important;max-width:1160px}
+.homeIntro{text-align:center;margin-bottom:38px;position:relative}
+.homeMark{margin:0 auto 15px;width:68px;height:68px;border-radius:22px;display:grid;place-items:center;font-size:30px;color:#eaffff;background:linear-gradient(145deg,#214e65,#192744);border:1px solid #72e4dc;box-shadow:0 15px 42px #020914aa,0 0 35px #55dccc22}
+.homeIntro .eyebrow{font-size:10px;letter-spacing:4px;color:#8ce8ed;font-weight:800}
+.homeIntro h1{font-size:clamp(38px,6vw,66px);line-height:1.25;margin:8px 0 4px;font-weight:950;letter-spacing:-2px}
+.homeIntro h1 span{background:linear-gradient(100deg,#75e7df,#8dbbff 52%,#c5a5ff);background-clip:text;-webkit-background-clip:text;color:transparent}
+.homeIntro p{margin:7px 0 0;color:#9eb2c9;font-size:12px;letter-spacing:.3px}
+.homeGroupTitle{font-size:12px;color:#dbeaff;font-weight:800;letter-spacing:.4px;margin:0 0 17px}
+.homeGroupTitle:after{background:linear-gradient(90deg,transparent,#52728f 65%,#78dfd5)}
+.homeMainGrid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.categoryTile{height:280px;min-height:280px;border-radius:25px!important;background:#14263c!important;outline:1px solid #ffffff18;outline-offset:4px;box-shadow:0 18px 50px #02091488, inset 0 1px #ffffff22;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.categoryTile:before{inset:-1px;border-radius:27px;padding:2px;background:linear-gradient(135deg,#ff5d79 0%,#ff5d79 28%,#47e1b0 72%,#47e1b0 100%)}
+.categoryTile:after{background:linear-gradient(180deg,#07111b08 5%,#07111b18 38%,#07111be8 100%)}
+.tilePhoto{filter:saturate(1.12) contrast(1.04);transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .5s}
+.categoryTile:hover{transform:translateY(-8px);box-shadow:0 28px 60px #020914bb,0 0 28px color-mix(in srgb,var(--tile-accent) 22%,transparent)}
+.categoryTile:hover .tilePhoto{transform:scale(1.075);filter:saturate(1.25) contrast(1.07)}
+.categoryTile .tileIcon{width:45px;height:45px;top:17px;right:17px;border-radius:15px;background:#071525c9;border:1px solid color-mix(in srgb,var(--tile-accent) 80%,white);box-shadow:0 7px 25px #0005;color:var(--tile-accent);backdrop-filter:blur(14px)}
+.categoryTile .tileTitle{font-size:22px;font-weight:950;padding:0 20px 23px;text-shadow:0 3px 20px #000}
+.categoryTile .tileArrow{left:18px;bottom:25px;color:var(--tile-accent);font-size:25px}
+.cat-stone{--tile-accent:#ff7890}.cat-sink{--tile-accent:#5be3b3}.cat-renovation{--tile-accent:#bba6ff}.cat-tools{--tile-accent:#75cfff}
+.cat-stone:before{background:linear-gradient(145deg,#ff5d79,#45e0ad)}.cat-sink:before{background:linear-gradient(145deg,#45e0ad,#ff5d79)}.cat-renovation:before{background:linear-gradient(35deg,#ff5d79,#45e0ad)}.cat-tools:before{background:linear-gradient(215deg,#45e0ad,#ff5d79)}
+.secondaryTitle{margin-top:40px}
+.homeOtherGrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.secondaryTile{min-height:76px;padding:13px 17px;border-radius:17px;background:linear-gradient(145deg,#152a43,#101d31);border:1px solid color-mix(in srgb,var(--tile-accent) 42%,#263b56);box-shadow:0 9px 26px #02091455;transition:transform .25s,border-color .25s,box-shadow .25s;font-size:13px;font-weight:800;color:#eaf3ff}
+.secondaryTile:hover{transform:translateY(-4px);border-color:var(--tile-accent);box-shadow:0 15px 32px #02091488}
+.secondaryTile span{width:40px;height:40px;border-radius:13px;display:grid;place-items:center;background:color-mix(in srgb,var(--tile-accent) 14%,#15243a);border:1px solid color-mix(in srgb,var(--tile-accent) 40%,transparent);color:var(--tile-accent);font-size:18px}
+.secondaryTile b{color:var(--tile-accent);font-size:19px}
+.secondaryTile:nth-child(1){--tile-accent:#54d6ef}.secondaryTile:nth-child(2){--tile-accent:#b69cff}.secondaryTile:nth-child(3){--tile-accent:#f3a96b}.secondaryTile:nth-child(4){--tile-accent:#ff7894}.secondaryTile:nth-child(5){--tile-accent:#65d7a4}.secondaryTile:nth-child(6){--tile-accent:#f1cf69}
+.pageView.active{animation:pageReveal .38s ease both}
+@keyframes pageReveal{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+.section{padding-top:36px}.sectionHead{margin-bottom:24px}.sectionHead h2{font-size:25px;font-weight:900}.goldline{width:66px;height:3px;border-radius:9px;background:linear-gradient(90deg,#ff6480,#5be0b0)}
+.product,.infoCard,.sample,.review{border-radius:20px;background:linear-gradient(145deg,#152942,#101d30);border-color:#304965;box-shadow:0 12px 35px #02091440}
+.btn{border-radius:13px;border-color:#3b5877;background:#172a43;color:#eaf3ff}.btn:hover{border-color:#78e2db;color:#9af1e8}
+.field{border-radius:13px;background:#0e1b2d;border-color:#38536f}.field:focus{border-color:#72dfd7;box-shadow:0 0 0 3px #72dfd71a}
+.adminFab{box-shadow:0 10px 28px #02091499}
+@media(max-width:850px){.homeMainGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.categoryTile{height:245px;min-height:245px}.homeOtherGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.headerNote{display:none}}
+@media(max-width:520px){.nav{height:68px}.brand{font-size:18px}.brandmark{width:40px;height:40px}.globalBack{padding:8px 12px;font-size:11px}.homeMenu{padding-top:30px!important}.homeIntro{margin-bottom:30px}.homeMark{width:59px;height:59px}.homeIntro h1{font-size:43px}.homeMainGrid{gap:12px}.categoryTile{height:205px;min-height:205px;border-radius:19px!important}.categoryTile:before{border-radius:21px}.categoryTile:after{border-radius:19px}.categoryTile .tileIcon{width:37px;height:37px;top:12px;right:12px;font-size:19px}.categoryTile .tileTitle{font-size:18px;padding:0 14px 18px}.categoryTile .tileArrow{bottom:18px;left:12px;font-size:21px}.homeOtherGrid{grid-template-columns:1fr;gap:9px}.secondaryTile{min-height:62px}.section{padding-top:25px}.sectionHead h2{font-size:21px}}
+
 </style>
 </head>
 <body>
 <header class="topbar"><div class="wrap nav">
+ <button class="globalBack" id="globalBack" onclick="showPage('home')" type="button">→ بازگشت</button>
  <a class="brand" href="#" onclick="showPage('home');return false"><span class="brandmark">✦</span><span>آذین سنگ<small>AZIN SANG COLLECTION</small></span></a>
- <div class="headerNote">طراحی و اجرای تخصصی سنگ</div>
+ <span class="headerNote">AZIN SANG · STONE STUDIO</span>
 </div></header>
 <main>
 <section class="wrap homeMenu pageView active" id="home">
@@ -85,14 +135,14 @@ body{background:radial-gradient(ellipse at 12% 0%,#26345a 0,transparent 34%),rad
   <div class="homeMark">✦</div>
   <div class="eyebrow">AZIN SANG COLLECTION</div>
   <h1>آذین <span>سنگ</span></h1>
-  <p>برای ورود، یکی از بخش‌های زیر را انتخاب کنید</p>
+  <p>انتخاب بخش موردنظر</p>
  </div>
  <div class="homeGroupTitle">خدمات و محصولات</div>
  <div class="homeMainGrid">
-  <button class="homeTile primaryTile categoryTile cat-stone" onclick="selectCategory('سنگ')"><img class="tilePhoto" src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=85" alt="سنگ طبیعی و اسلب"><span class="tileShade"></span><span class="tileIcon">◈</span><span class="tileTitle">سنگ</span><span class="tileDesc">انواع سنگ ساختمانی</span><span class="tileArrow">←</span></button>
-  <button class="homeTile primaryTile categoryTile cat-sink" onclick="selectCategory('روشویی')"><img class="tilePhoto" src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=85" alt="روشویی مدرن"><span class="tileShade"></span><span class="tileIcon">◇</span><span class="tileTitle">روشویی</span><span class="tileDesc">مدل‌های خاص و مدرن</span><span class="tileArrow">←</span></button>
-  <button class="homeTile primaryTile categoryTile cat-renovation" onclick="openRenovationPage()"><img class="tilePhoto" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="بازسازی و طراحی داخلی منزل"><span class="tileShade"></span><span class="tileIcon">⌂</span><span class="tileTitle">بازسازی منازل</span><span class="tileDesc">تغییر فضا، با اجرای حرفه‌ای</span><span class="tileArrow">←</span></button>
-  <button class="homeTile primaryTile categoryTile cat-tools" onclick="selectCategory('ابزار سنگی')"><img class="tilePhoto" src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=85" alt="ابزار کار سنگ"><span class="tileShade"></span><span class="tileIcon">⌁</span><span class="tileTitle">ابزار سنگی</span><span class="tileDesc">ابزار و جزئیات سنگ‌کاری</span><span class="tileArrow">←</span></button>
+  <button class="homeTile primaryTile categoryTile cat-stone" onclick="selectCategory('سنگ')"><img class="tilePhoto" src="category-stone.jpg" alt="سنگ طبیعی و اسلب" onerror="this.style.display='none'"><span class="tileShade"></span><span class="tileIcon">◈</span><span class="tileTitle">سنگ</span><span class="tileArrow">←</span></button>
+  <button class="homeTile primaryTile categoryTile cat-sink" onclick="selectCategory('روشویی')"><img class="tilePhoto" src="category-sink.jpg" alt="روشویی مدرن" onerror="this.style.display='none'"><span class="tileShade"></span><span class="tileIcon">◇</span><span class="tileTitle">روشویی</span><span class="tileArrow">←</span></button>
+  <button class="homeTile primaryTile categoryTile cat-renovation" onclick="openRenovationPage()"><img class="tilePhoto" src="category-renovation.jpg" alt="بازسازی و طراحی داخلی منزل" onerror="this.style.display='none'"><span class="tileShade"></span><span class="tileIcon">⌂</span><span class="tileTitle">بازسازی منازل</span><span class="tileArrow">←</span></button>
+  <button class="homeTile primaryTile categoryTile cat-tools" onclick="selectCategory('ابزار سنگی')"><img class="tilePhoto" src="category-tools.jpg" alt="ابزار کار سنگ" onerror="this.style.display='none'"><span class="tileShade"></span><span class="tileIcon">⌁</span><span class="tileTitle">ابزار سنگی</span><span class="tileArrow">←</span></button>
  </div>
  <div class="homeGroupTitle secondaryTitle">بخش‌های دیگر</div>
  <div class="homeOtherGrid">
@@ -102,33 +152,24 @@ body{background:radial-gradient(ellipse at 12% 0%,#26345a 0,transparent 34%),rad
   <button class="homeTile secondaryTile" onclick="showPage('reviews')"><span>☆</span> نظرات مشتریان <b>←</b></button>
   <button class="homeTile secondaryTile" onclick="showPage('faq')"><span>؟</span> سؤالات متداول <b>←</b></button>
   <button class="homeTile secondaryTile" onclick="showPage('rules')"><span>≡</span> قوانین سفارش <b>←</b></button>
-  <button class="homeTile secondaryTile" onclick="showPage('support')"><span>⌖</span> آدرس و مسیریابی <b>←</b></button>
  </div>
 </section>
-<section class="wrap section pageView" id="categories"><div class="sectionHead"><div><h2>دسته‌بندی محصولات</h2><div class="goldline"></div><p>دسته موردنظر خود را انتخاب کنید</p></div></div>
- <div class="categories">
-  <button class="category" onclick="selectCategory('سنگ')"><div class="catIcon">◈</div><h3>سنگ</h3><p>انواع سنگ و محصولات سنگی</p><span class="arrow">←</span></button>
-  <button class="category" onclick="selectCategory('روشویی')"><div class="catIcon">◇</div><h3>روشویی</h3><p>روشویی‌های خاص و سفارشی</p><span class="arrow">←</span></button>
-  <button class="category" onclick="selectCategory('بازسازی منازل')"><div class="catIcon">⌂</div><h3>بازسازی منازل</h3><p>طراحی، اجرا و نوسازی</p><span class="arrow">←</span></button>
-  <button class="category" onclick="selectCategory('ابزار سنگی')"><div class="catIcon">⌁</div><h3>ابزار سنگی</h3><p>ابزار و جزئیات تخصصی سنگ</p><span class="arrow">←</span></button>
- </div>
-</section>
-<section class="wrap section pageView" id="productSection"><div style="margin-bottom:16px"><button class="btn" onclick="showPage('home')">← بازگشت به صفحه اصلی</button></div><div class="sectionHead"><div><h2 id="productHeading">محصولات آذین سنگ</h2><div class="goldline"></div><p>برای مشاهده جزئیات، محصول را انتخاب کنید</p></div><button class="btn" id="backCategories" onclick="resetFilters()">بازگشت به دسته‌بندی‌ها</button><button class="btn" onclick="openRenovation()">درخواست بازسازی</button></div>
- <div class="toolbar"><input id="searchInput" class="field search" placeholder="جست‌وجوی نام محصول یا مدل..." oninput="renderProducts()"><select id="sortSelect" class="field" onchange="renderProducts()"><option value="new">جدیدترین</option><option value="cheap">ارزان‌ترین</option><option value="expensive">گران‌ترین</option><option value="name">نام محصول</option></select><select id="stockSelect" class="field" onchange="renderProducts()"><option value="all">همه محصولات</option><option value="available">فقط موجودها</option></select><button class="btn" onclick="showFavorites()">♡ علاقه‌مندی‌ها</button></div>
+<section class="wrap section pageView" id="productSection"><div class="sectionHead"><div><h2 id="productHeading">محصولات آذین سنگ</h2><div class="goldline"></div><p>برای مشاهده جزئیات، محصول را انتخاب کنید</p></div></div>
+ <div class="toolbar"><input id="searchInput" class="field search" placeholder="جست‌وجوی نام محصول یا مدل..." oninput="renderProducts()"><select id="sortSelect" class="field" onchange="renderProducts()"><option value="new">جدیدترین</option><option value="cheap">ارزان‌ترین</option><option value="expensive">گران‌ترین</option><option value="name">نام محصول</option></select><select id="stockSelect" class="field" onchange="renderProducts()"><option value="all">همه محصولات</option><option value="available">فقط موجودها</option></select></div>
  <div class="products" id="productsGrid"><div class="empty">هنوز محصولی ثبت نشده است. محصولات را از پنل مدیریت اضافه کنید.</div></div>
 </section>
-<section class="wrap section pageView" id="about"><div style="margin-bottom:16px"><button class="btn" onclick="showPage('home')">← بازگشت به صفحه اصلی</button></div><div class="sectionHead"><div><h2>درباره آذین سنگ</h2><div class="goldline"></div><p>کیفیت، ظرافت و تعهد در اجرای هر پروژه</p></div></div>
+<section class="wrap section pageView" id="about"><div class="sectionHead"><div><h2>درباره آذین سنگ</h2><div class="goldline"></div><p>کیفیت، ظرافت و تعهد در اجرای هر پروژه</p></div></div>
  <div class="aboutGrid"><div class="infoCard"><h3>هنر سنگ، زیبایی ماندگار</h3><p id="aboutText">آذین سنگ در بندرماهشهر، ارائه‌دهنده محصولات سنگی، روشویی‌های سفارشی، ابزار سنگی و خدمات بازسازی منازل است. هدف ما ارائه کیفیت مناسب، اجرای دقیق و تجربه‌ای مطمئن برای مشتریان است.</p></div><div class="infoCard"><h3>خدمات ما</h3><ul><li>عرضه انواع سنگ</li><li>ساخت و سفارش روشویی</li><li>بازسازی و نوسازی منازل</li><li>تأمین ابزار سنگی</li></ul></div></div>
 </section>
-<section class="wrap section pageView" id="renovation"><div style="margin-bottom:16px"><button class="btn" onclick="showPage('home')">← بازگشت به صفحه اصلی</button></div>
+<section class="wrap section pageView" id="renovation">
 <div class="infoCard"><div class="sectionHead"><div><h2>درخواست بازسازی منزل</h2><div class="goldline"></div><p>مشخصات پروژه را وارد کنید تا پیامک آماده برای کارگاه ساخته شود.</p></div></div>
 <button class="btn gold" onclick="openRenovation()">تکمیل فرم درخواست بازسازی</button>
 <a class="btn" href="https://rubika.ir/Omidi__Xx" target="_blank" rel="noopener">ارسال عکس پروژه در روبیکا</a>
 </div></section>
-<section class="wrap section pageView" id="samples"><div style="margin-bottom:16px"><button class="btn" onclick="showPage('home')">← بازگشت به صفحه اصلی</button></div><div class="sectionHead"><div><h2>نمونه‌کارهای اجراشده</h2><div class="goldline"></div><p>بخشی از تجربه و کیفیت کار ما</p></div></div><div class="sampleGrid" id="samplesGrid"><div class="sample"><div class="sampleImg">◇</div><b>نمونه‌کار اول</b><p class="muted">تصاویر پروژه‌ها از پنل مدیریت قابل ثبت هستند.</p></div><div class="sample"><div class="sampleImg">◈</div><b>نمونه‌کار دوم</b><p class="muted">کیفیت اجرا و ظرافت در جزئیات.</p></div><div class="sample"><div class="sampleImg">⌂</div><b>نمونه‌کار سوم</b><p class="muted">برای مشاهده پروژه‌های بیشتر تماس بگیرید.</p></div></div></section>
-<section class="wrap section pageView" id="reviews"><div style="margin-bottom:16px"><button class="btn" onclick="showPage('home')">← بازگشت به صفحه اصلی</button></div><div class="sectionHead"><div><h2>نظر مشتریان</h2><div class="goldline"></div><p>تجربه مشتریان آذین سنگ</p></div><button class="btn" onclick="openReview()">ثبت نظر</button></div><div id="reviewsGrid" class="sampleGrid"><div class="empty">هنوز نظری ثبت نشده است.</div></div></section>
-<section class="wrap section pageView" id="faq"><div style="margin-bottom:16px"><button class="btn" onclick="showPage('home')">← بازگشت به صفحه اصلی</button></div><div class="sectionHead"><div><h2>سؤالات متداول</h2><div class="goldline"></div></div></div><div class="aboutGrid"><div class="infoCard"><h3>چطور سفارش ثبت کنم؟</h3><p>برای ثبت سفارش با شماره کارگاه تماس بگیرید.</p></div><div class="infoCard"><h3>آیا روشویی سفارشی ساخته می‌شود؟</h3><p>برای بررسی مدل و ابعاد دلخواه با ما تماس بگیرید.</p></div><div class="infoCard"><h3>چطور درخواست بازسازی بدهم؟</h3><p>فرم درخواست بازسازی را تکمیل کنید تا پیامک آماده شود.</p></div><div class="infoCard"><h3>چطور عکس پروژه را ارسال کنم؟</h3><p>از طریق روبیکا با شناسه پشتیبانی در ارتباط باشید.</p></div></div></section>
-<section class="wrap section pageView" id="rules"><div style="margin-bottom:16px"><button class="btn" onclick="showPage('home')">← بازگشت به صفحه اصلی</button></div><div class="infoCard"><h3>قوانین و شرایط سفارش</h3><p>قیمت نهایی و زمان تحویل پس از بررسی نوع محصول، ابعاد و شرایط پروژه اعلام می‌شود. ثبت درخواست به‌منزله تأیید نهایی سفارش نیست و سفارش پس از هماهنگی با کارگاه قطعی خواهد شد.</p></div></section>
+<section class="wrap section pageView" id="samples"><div class="sectionHead"><div><h2>نمونه‌کارهای اجراشده</h2><div class="goldline"></div><p>بخشی از تجربه و کیفیت کار ما</p></div></div><div class="sampleGrid" id="samplesGrid"><div class="sample"><div class="sampleImg">◇</div><b>نمونه‌کار اول</b><p class="muted">تصاویر پروژه‌ها از پنل مدیریت قابل ثبت هستند.</p></div><div class="sample"><div class="sampleImg">◈</div><b>نمونه‌کار دوم</b><p class="muted">کیفیت اجرا و ظرافت در جزئیات.</p></div><div class="sample"><div class="sampleImg">⌂</div><b>نمونه‌کار سوم</b><p class="muted">برای مشاهده پروژه‌های بیشتر تماس بگیرید.</p></div></div></section>
+<section class="wrap section pageView" id="reviews"><div class="sectionHead"><div><h2>نظر مشتریان</h2><div class="goldline"></div><p>تجربه مشتریان آذین سنگ</p></div><button class="btn" onclick="openReview()">ثبت نظر</button></div><div id="reviewsGrid" class="sampleGrid"><div class="empty">هنوز نظری ثبت نشده است.</div></div></section>
+<section class="wrap section pageView" id="faq"><div class="sectionHead"><div><h2>سؤالات متداول</h2><div class="goldline"></div></div></div><div class="aboutGrid"><div class="infoCard"><h3>چطور سفارش ثبت کنم؟</h3><p>برای ثبت سفارش با شماره کارگاه تماس بگیرید.</p></div><div class="infoCard"><h3>آیا روشویی سفارشی ساخته می‌شود؟</h3><p>برای بررسی مدل و ابعاد دلخواه با ما تماس بگیرید.</p></div><div class="infoCard"><h3>چطور درخواست بازسازی بدهم؟</h3><p>فرم درخواست بازسازی را تکمیل کنید تا پیامک آماده شود.</p></div><div class="infoCard"><h3>چطور عکس پروژه را ارسال کنم؟</h3><p>از طریق روبیکا با شناسه پشتیبانی در ارتباط باشید.</p></div></div></section>
+<section class="wrap section pageView" id="rules"><div class="infoCard"><h3>قوانین و شرایط سفارش</h3><p>قیمت نهایی و زمان تحویل پس از بررسی نوع محصول، ابعاد و شرایط پروژه اعلام می‌شود. ثبت درخواست به‌منزله تأیید نهایی سفارش نیست و سفارش پس از هماهنگی با کارگاه قطعی خواهد شد.</p></div></section>
 </main>
 <footer class="footer pageView" id="support"><div class="wrap footerGrid"><div><div class="brand"><span class="brandmark">✧</span><span>آذین سنگ<small>هنر سنگ، زیبایی ماندگار</small></span></div><p>انتخابی مطمئن برای سنگ، روشویی، ابزار سنگی و بازسازی منازل.</p></div><div><h3>ارتباط با ما</h3><p>تلفن: <a href="tel:09129374866">09129374866</a></p><p>روبیکا: <a href="https://rubika.ir/Omidi__Xx" target="_blank" rel="noopener">@Omidi__Xx</a></p><p>آدرس: بندرماهشهر، انتهای خیابان طالقانی، پایین‌تر از کاشی‌فروشی الوند، آذین سنگ</p></div><div><h3>مسیریابی و خدمات</h3><p><a target="_blank" rel="noopener" href="https://nshn.ir/?q=%D8%A2%D8%B0%DB%8C%D9%86%20%D8%B3%D9%86%DA%AF%20%D8%A8%D9%86%D8%AF%D8%B1%D9%85%D8%A7%D9%87%D8%B4%D9%87%D8%B1">مسیریابی با نشان</a></p><p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%D8%A2%D8%B0%DB%8C%D9%86%20%D8%B3%D9%86%DA%AF%20%D8%A8%D9%86%D8%AF%D8%B1%D9%85%D8%A7%D9%87%D8%B4%D9%87%D8%B1">مسیریابی با گوگل مپ</a></p><p><a target="_blank" rel="noopener" href="https://balad.ir/">مسیریابی با بلد</a></p><p><a href="#rules">قوانین سفارش</a> · <a href="#faq">سؤالات متداول</a></p></div></div><div class="wrap muted" style="text-align:center;margin-top:25px">© تمامی حقوق برای آذین سنگ محفوظ است.</div></footer>
 
@@ -167,7 +208,7 @@ function loadData(){try{return JSON.parse(localStorage.getItem('azin_data'))||{p
 function saveData(){localStorage.setItem('azin_data',JSON.stringify(data))}
 function toast(t){let x=document.getElementById('toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2600)}
 function closeModal(id){document.getElementById(id).classList.remove('show')}
-function showPage(id){document.querySelectorAll('.pageView').forEach(el=>el.classList.remove('active'));const target=document.getElementById(id);if(target){target.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}}
+function showPage(id){document.querySelectorAll('.pageView').forEach(el=>el.classList.remove('active'));const target=document.getElementById(id);if(target){target.classList.add('active');}const back=document.getElementById('globalBack');if(back)back.classList.toggle('visible',id!=='home');window.scrollTo({top:0,behavior:'smooth'});}
 function openRenovationPage(){showPage('renovation');}
 function selectCategory(c){activeCategory=c;favoritesOnly=false;document.getElementById('productHeading').textContent='محصولات '+c;showPage('productSection');renderProducts()}
 function resetFilters(){activeCategory='';favoritesOnly=false;document.getElementById('searchInput').value='';document.getElementById('productHeading').textContent='محصولات آذین سنگ';renderProducts()}
