@@ -305,7 +305,8 @@ function saveData(){localStorage.setItem('azin_data',JSON.stringify(data));hasLo
 // Read the published JSON from the same folder as this HTML file.
 async function loadPublishedData(){
   try{
-    const dataUrl=new URL('data.json',document.baseURI);
+    const repoSegment=location.pathname.split('/').filter(Boolean)[0]||'';
+    const dataUrl=new URL('/'+repoSegment+'/data.json',location.origin);
     dataUrl.searchParams.set('_',Date.now());
     const response=await fetch(dataUrl.href,{cache:'no-store'});
     if(!response.ok) throw new Error('data.json HTTP '+response.status);
@@ -320,7 +321,7 @@ async function loadPublishedData(){
     if(heroText) heroText.textContent=data.settings.heroText||heroText.textContent;
     if(aboutText) aboutText.textContent=data.settings.aboutText||aboutText.textContent;
     console.info('Azin Sang data.json loaded:',data.products.length,'products');
-  }catch(e){console.error('خطا در دریافت data.json:',e);}
+  }catch(e){console.error('خطا در دریافت data.json:',e);const count=document.getElementById('productResultCount');const grid=document.getElementById('productsGrid');if(count)count.textContent='خطا در دریافت اطلاعات محصولات';if(grid)grid.innerHTML='<div class="empty productEmpty"><b>اطلاعات محصولات بارگذاری نشد</b><small>لطفاً وجود فایل data.json در پوشه اصلی مخزن را بررسی کنید.</small></div>';}
 }
 function toast(t){let x=document.getElementById('toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2600)}
 function closeModal(id){document.getElementById(id).classList.remove('show')}
