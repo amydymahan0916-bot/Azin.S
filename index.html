@@ -33,6 +33,45 @@ body{background:radial-gradient(ellipse at 50% -15%,#243b66 0,transparent 48%),l
 @media(max-width:760px){.homeMainGrid{grid-template-columns:repeat(2,1fr);gap:10px}.primaryTile{min-height:125px}.homeMenu{padding-top:28px!important}.homeIntro{margin-bottom:25px}}
 @media(max-width:420px){.headerNote{font-size:10px}.nav{height:66px}.homeOtherGrid{grid-template-columns:1fr}.secondaryTile{min-height:54px}.homeMainGrid{gap:9px}.primaryTile{padding:15px;min-height:116px}.tileTitle{font-size:14px}}
 
+
+/* Visual refresh v4: rich category imagery, individual accents and dual-color outlines */
+:root{--bg:#0b1020;--panel:#141d31;--panel2:#1a2740;--muted:#a9b6cb;--line:#34445f;--white:#f5f7ff;--gold:#79dce8;--gold2:#c4f4f6;--green:#45d49a;--red:#ff637d}
+body{background:radial-gradient(ellipse at 12% 0%,#26345a 0,transparent 34%),radial-gradient(ellipse at 92% 38%,#172e3b 0,transparent 30%),#0b1020;color:#f5f7ff}
+.topbar{background:#0b1020eF;border-bottom:1px solid #35445e}
+.brandmark{border-color:#75dce8;color:#a4f1f4;background:linear-gradient(145deg,#25385c,#111a2c);box-shadow:0 0 25px #56d8e522}
+.btn{background:#1a2942;border-color:#435575;color:#f2f6ff}.btn:hover{border-color:#7de5ed;color:#a7f4f2}
+.btn.gold{background:linear-gradient(135deg,#8de8e5,#5cb6e8);color:#092033}.btn.green{background:#153c34;border-color:#35b889;color:#a9f6d8}
+.homeMenu{max-width:1040px;padding-top:48px!important}
+.homeIntro{margin-bottom:38px}.homeMark{width:76px;height:76px;border-radius:25px;color:#e8fbff;background:linear-gradient(145deg,#253e64,#17223d);border:1px solid #75dce888;box-shadow:0 15px 38px #030817aa,0 0 32px #59d9e822}
+.homeIntro .eyebrow{color:#8ce8ed}.homeIntro h1{letter-spacing:-1px}.homeIntro h1 span{background:linear-gradient(90deg,#6de0e9,#a99bff);background-clip:text;-webkit-background-clip:text;color:transparent}
+.homeGroupTitle{font-size:14px;color:#e4edff;margin-bottom:16px;display:flex;align-items:center;gap:12px}.homeGroupTitle:after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,#405573)}
+.homeMainGrid{grid-template-columns:repeat(4,minmax(0,1fr));gap:19px}
+.categoryTile{height:255px;min-height:255px;padding:0!important;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;text-align:right;border:0!important;border-radius:23px!important;background:#17243a!important;isolation:isolate;box-shadow:0 18px 38px #02081770;outline:1px solid #ffffff18;outline-offset:3px}
+.categoryTile:before{content:"";position:absolute;inset:-2px;border-radius:25px;padding:2px;background:linear-gradient(135deg,#ff536e 0%,#ff536e 35%,#31d18b 65%,#31d18b 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;z-index:5;pointer-events:none}
+.categoryTile:after{content:"";position:absolute;inset:0;border-radius:23px;background:linear-gradient(180deg,#08101a05 12%,#08101a30 42%,#08101af2 100%);z-index:-1}
+.tilePhoto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .55s ease;filter:saturate(1.08)}
+.categoryTile:hover{transform:translateY(-7px) scale(1.015);box-shadow:0 22px 45px #020817aa}
+.categoryTile:hover .tilePhoto{transform:scale(1.08)}
+.categoryTile .tileIcon{position:absolute;top:15px;right:15px;width:43px;height:43px;display:grid;place-items:center;border-radius:14px;background:#0c172bcc;border:1px solid var(--tile-accent);color:var(--tile-accent);font-size:23px;backdrop-filter:blur(10px)}
+.categoryTile .tileTitle{font-size:21px;font-weight:900;color:#fff;padding:0 20px 0 48px;text-shadow:0 2px 14px #000}
+.categoryTile .tileDesc{font-size:11px;color:#d7e3f3;padding:3px 20px 21px;text-shadow:0 2px 9px #000}
+.categoryTile .tileArrow{left:17px;bottom:20px;color:var(--tile-accent);font-size:22px}
+.cat-stone{--tile-accent:#ff7185}.cat-sink{--tile-accent:#55e0b0}.cat-renovation{--tile-accent:#b6a1ff}.cat-tools{--tile-accent:#68c9ff}
+.cat-stone:before{background:linear-gradient(145deg,#ff536e,#27d58b)}.cat-sink:before{background:linear-gradient(145deg,#27d58b,#ff536e)}.cat-renovation:before{background:linear-gradient(35deg,#ff536e,#27d58b)}.cat-tools:before{background:linear-gradient(215deg,#27d58b,#ff536e)}
+.homeOtherGrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.secondaryTile{min-height:70px;padding:12px 15px;border-radius:16px;position:relative;overflow:hidden;background:linear-gradient(145deg,#192943,#121d32);border:1px solid color-mix(in srgb,var(--tile-accent) 55%,#26364e);box-shadow:0 8px 22px #02081750;transition:.22s}
+.secondaryTile:hover{transform:translateY(-3px);border-color:var(--tile-accent);box-shadow:0 12px 26px #02081790}
+.secondaryTile span{background:color-mix(in srgb,var(--tile-accent) 17%,#15243a);border:1px solid color-mix(in srgb,var(--tile-accent) 45%,transparent);color:var(--tile-accent);width:38px;height:38px;border-radius:12px}
+.secondaryTile b{color:var(--tile-accent)}
+.secondaryTile:nth-child(1){--tile-accent:#54d6ef}.secondaryTile:nth-child(2){--tile-accent:#b69cff}.secondaryTile:nth-child(3){--tile-accent:#f3a96b}.secondaryTile:nth-child(4){--tile-accent:#ff7894}.secondaryTile:nth-child(5){--tile-accent:#65d7a4}.secondaryTile:nth-child(6){--tile-accent:#f1cf69}.secondaryTile:nth-child(7){--tile-accent:#71baff}
+.sectionHead h2{color:#f4f7ff}.goldline{background:linear-gradient(90deg,#ff637d,#3ed59a);height:3px}
+.category,.product,.infoCard,.sample,.review{background:linear-gradient(145deg,#192943,#111d32);border-color:#344a68}
+.category:hover,.product:hover{border-color:#72dce8}.catIcon,.placeholder,.price,.infoCard h3,.footer h3{color:#8ce6ec}
+.field{background:#101b2e;border-color:#3a4e6e;color:#f5f7ff}.productImg,.detailImage{background:#192a44}.discount{background:#ff607c}.stock{color:#6ce3af}
+.footer{background:#091322;border-color:#30445f}.modalBox{background:#121f34;border-color:#466080}.modalHead h2{color:#8ce6ec}.close{background:#263a58}.stat{background:#192943;border-color:#3a506e}.stat b,.adminTable th{color:#67dfb0}.notice{background:#1d304c;border-color:#4b688d;color:#d0e2fa}.toast{background:#193a45;border-color:#4b9ca8}.stars{color:#ffd16d}.adminFab{background:#26315b;border:1px solid #8278ef;color:#d8d3ff}
+@media(max-width:850px){.homeMainGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.categoryTile{height:230px;min-height:230px}.homeOtherGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.homeMenu{padding-top:28px!important}.homeIntro{margin-bottom:28px}.homeMainGrid{gap:12px}.categoryTile{height:190px;min-height:190px;border-radius:18px!important}.categoryTile:before{border-radius:20px}.categoryTile:after{border-radius:18px}.categoryTile .tileIcon{width:36px;height:36px;top:11px;right:11px;font-size:19px}.categoryTile .tileTitle{font-size:17px;padding-right:13px}.categoryTile .tileDesc{font-size:10px;padding-right:13px;padding-bottom:17px}.categoryTile .tileArrow{bottom:16px;left:12px}.homeOtherGrid{grid-template-columns:1fr;gap:9px}.secondaryTile{min-height:60px}}
+
 </style>
 </head>
 <body>
@@ -50,10 +89,10 @@ body{background:radial-gradient(ellipse at 50% -15%,#243b66 0,transparent 48%),l
  </div>
  <div class="homeGroupTitle">خدمات و محصولات</div>
  <div class="homeMainGrid">
-  <button class="homeTile primaryTile" onclick="selectCategory('سنگ')"><span class="tileIcon">◈</span><span class="tileTitle">سنگ</span><span class="tileArrow">←</span></button>
-  <button class="homeTile primaryTile" onclick="selectCategory('روشویی')"><span class="tileIcon">◇</span><span class="tileTitle">روشویی</span><span class="tileArrow">←</span></button>
-  <button class="homeTile primaryTile" onclick="openRenovationPage()"><span class="tileIcon">⌂</span><span class="tileTitle">بازسازی منازل</span><span class="tileArrow">←</span></button>
-  <button class="homeTile primaryTile" onclick="selectCategory('ابزار سنگی')"><span class="tileIcon">⌁</span><span class="tileTitle">ابزار سنگی</span><span class="tileArrow">←</span></button>
+  <button class="homeTile primaryTile categoryTile cat-stone" onclick="selectCategory('سنگ')"><img class="tilePhoto" src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=85" alt="سنگ طبیعی و اسلب"><span class="tileShade"></span><span class="tileIcon">◈</span><span class="tileTitle">سنگ</span><span class="tileDesc">انواع سنگ ساختمانی</span><span class="tileArrow">←</span></button>
+  <button class="homeTile primaryTile categoryTile cat-sink" onclick="selectCategory('روشویی')"><img class="tilePhoto" src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=85" alt="روشویی مدرن"><span class="tileShade"></span><span class="tileIcon">◇</span><span class="tileTitle">روشویی</span><span class="tileDesc">مدل‌های خاص و مدرن</span><span class="tileArrow">←</span></button>
+  <button class="homeTile primaryTile categoryTile cat-renovation" onclick="openRenovationPage()"><img class="tilePhoto" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="بازسازی و طراحی داخلی منزل"><span class="tileShade"></span><span class="tileIcon">⌂</span><span class="tileTitle">بازسازی منازل</span><span class="tileDesc">تغییر فضا، با اجرای حرفه‌ای</span><span class="tileArrow">←</span></button>
+  <button class="homeTile primaryTile categoryTile cat-tools" onclick="selectCategory('ابزار سنگی')"><img class="tilePhoto" src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=85" alt="ابزار کار سنگ"><span class="tileShade"></span><span class="tileIcon">⌁</span><span class="tileTitle">ابزار سنگی</span><span class="tileDesc">ابزار و جزئیات سنگ‌کاری</span><span class="tileArrow">←</span></button>
  </div>
  <div class="homeGroupTitle secondaryTitle">بخش‌های دیگر</div>
  <div class="homeOtherGrid">
