@@ -297,12 +297,13 @@ const PHONE='09129374866';
 const RUBIKA='https://rubika.ir/Omidi__Xx';
 const CATS=['سنگ','روشویی','بازسازی منازل','ابزار سنگی'];
 const EMPTY_DATA={products:[],samples:[],reviews:[],settings:{heroText:'انتخابی ماندگار از سنگ‌های طبیعی، روشویی‌های خاص و خدمات بازسازی با کیفیت و ظرافت.',aboutText:'آذین سنگ در بندرماهشهر، ارائه‌دهنده محصولات سنگی، روشویی‌های سفارشی، ابزار سنگی و خدمات بازسازی منازل است.'}};
-let hasLocalData=!!localStorage.getItem('azin_data');
+// Always check the published data.json on each page load; old local data must not block public updates.
+let hasLocalData=false;
 let data=loadData(), activeCategory='', favorites=JSON.parse(localStorage.getItem('azin_favs')||'[]'), favoritesOnly=false;
 function loadData(){try{return JSON.parse(localStorage.getItem('azin_data'))||structuredClone(EMPTY_DATA)}catch(e){return JSON.parse(JSON.stringify(EMPTY_DATA))}}
 function saveData(){localStorage.setItem('azin_data',JSON.stringify(data));hasLocalData=true}
 // Visitors without local admin data read the published data.json beside index.html.
-async function loadPublishedData(){if(hasLocalData)return;try{const response=await fetch('./data.json?'+Date.now(),{cache:'no-store'});if(!response.ok)return;const published=await response.json();if(!published||!Array.isArray(published.products))return;data={...EMPTY_DATA,...published,settings:{...EMPTY_DATA.settings,...(published.settings||{})}};renderProducts();renderSamples();renderReviews();document.getElementById('heroText').textContent=data.settings.heroText||document.getElementById('heroText').textContent;document.getElementById('aboutText').textContent=data.settings.aboutText||document.getElementById('aboutText').textContent;}catch(e){console.info('Published data.json not found; using empty catalogue.')}}
+async function loadPublishedData(){if(hasLocalData)return;try{const response=await fetch('./data.json?'+Date.now(),{cache:'no-store'});if(!response.ok)return;const published=await response.json();if(!published||!Array.isArray(published.products))return;data={...EMPTY_DATA,...published,settings:{...EMPTY_DATA.settings,...(published.settings||{})}};localStorage.setItem('azin_data',JSON.stringify(data));hasLocalData=true;renderProducts();renderSamples();renderReviews();document.getElementById('heroText').textContent=data.settings.heroText||document.getElementById('heroText').textContent;document.getElementById('aboutText').textContent=data.settings.aboutText||document.getElementById('aboutText').textContent;}catch(e){console.info('Published data.json not found; using empty catalogue.')}}
 function toast(t){let x=document.getElementById('toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2600)}
 function closeModal(id){document.getElementById(id).classList.remove('show')}
 function showPage(id){document.querySelectorAll('.pageView').forEach(el=>el.classList.remove('active'));const target=document.getElementById(id);if(target){target.classList.add('active');}const back=document.getElementById('globalBack');if(back)back.classList.toggle('visible',id!=='home');window.scrollTo({top:0,behavior:'smooth'});}
